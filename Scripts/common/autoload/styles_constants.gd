@@ -162,12 +162,12 @@ const MIN_CONTRAST_LARGE = 3.0               # WCAG AA for large text
 # UTILITY - Animation Easing
 # ============================================================================
 
-# For use with Tween.set_trans() and Tween.set_ease()
+# TRANS_* → Tween.set_trans(); EASE_* → Tween.set_ease()
 enum EasingType {
 	LINEAR = Tween.TRANS_LINEAR,
-	EASE_IN = Tween.TRANS_EASE_IN,
-	EASE_OUT = Tween.TRANS_EASE_OUT,
-	EASE_IN_OUT = Tween.TRANS_EASE_IN_OUT,
+	EASE_IN = Tween.EASE_IN,
+	EASE_OUT = Tween.EASE_OUT,
+	EASE_IN_OUT = Tween.EASE_IN_OUT,
 	EASE_OUT_BACK = Tween.TRANS_BACK,
 	EASE_OUT_BOUNCE = Tween.TRANS_BOUNCE,
 }
@@ -177,25 +177,25 @@ enum EasingType {
 # ============================================================================
 
 ## Get a color with modified opacity
-func get_color_with_opacity(color: Color, opacity: float) -> Color:
+static func get_color_with_opacity(color: Color, opacity: float) -> Color:
 	var result = color
 	result.a = opacity
 	return result
 
 ## Get a darkened version of a color (for hover states)
-func get_hover_color(color: Color, darken_amount: float = 0.2) -> Color:
+static func get_hover_color(color: Color, darken_amount: float = 0.2) -> Color:
 	return color.darkened(darken_amount)
 
 ## Get a lightened version of a color (for active states)
-func get_active_color(color: Color, lighten_amount: float = 0.15) -> Color:
+static func get_active_color(color: Color, lighten_amount: float = 0.15) -> Color:
 	return color.lightened(lighten_amount)
 
 ## Get a disabled version of any color (reduced opacity)
-func get_disabled_color(color: Color) -> Color:
+static func get_disabled_color(color: Color) -> Color:
 	return get_color_with_opacity(color, 0.5)
 
 ## Check if contrast ratio meets WCAG AA standards
-func check_contrast_ratio(color1: Color, color2: Color) -> bool:
+static func check_contrast_ratio(color1: Color, color2: Color) -> bool:
 	var lum1 = (0.299 * color1.r + 0.587 * color1.g + 0.114 * color1.b)
 	var lum2 = (0.299 * color2.r + 0.587 * color2.g + 0.114 * color2.b)
 	var lighter = max(lum1, lum2)
