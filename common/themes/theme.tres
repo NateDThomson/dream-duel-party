@@ -1,0 +1,192 @@
+[gd_resource type="Theme" load_steps=11 format=3]
+
+[ext_resource type="FontFile" uid="uid://dvsgg4ty1gvcl" path="res://assets/fonts/Montserrat-Black.ttf"]
+[ext_resource type="FontFile" uid="uid://d2h5b5hcvmxu" path="res://assets/fonts/Montserrat-Regular.ttf"]
+
+[sub_resource type="FontVariation" id="FontVariation_title"]
+base_font = ExtResource("uid://dvsgg4ty1gvcl")
+base_font_size = 48
+
+[sub_resource type="FontVariation" id="FontVariation_heading_medium"]
+base_font = ExtResource("uid://dvsgg4ty1gvcl")
+base_font_size = 32
+
+[sub_resource type="FontVariation" id="FontVariation_heading_small"]
+base_font = ExtResource("uid://dvsgg4ty1gvcl")
+base_font_size = 24
+
+[sub_resource type="FontVariation" id="FontVariation_body"]
+base_font = ExtResource("uid://d2h5b5hcvmxu")
+base_font_size = 16
+
+[sub_resource type="FontVariation" id="FontVariation_body_small"]
+base_font = ExtResource("uid://d2h5b5hcvmxu")
+base_font_size = 14
+
+[sub_resource type="FontVariation" id="FontVariation_label"]
+base_font = ExtResource("uid://d2h5b5hcvmxu")
+base_font_size = 12
+
+[sub_resource type="FontVariation" id="FontVariation_tiny"]
+base_font = ExtResource("uid://d2h5b5hcvmxu")
+base_font_size = 11
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_primary"]
+bg_color = Color(0, 1, 0.533333, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_primary_hover"]
+bg_color = Color(0, 0.8, 0.4, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[resource]
+default_font = SubResource("FontVariation_body")
+default_font_size = 16
+
+# ============================================================================
+# LABEL FONTS & COLORS
+# ============================================================================
+
+Label/font_sizes/font_size = 16
+Label/fonts/font = SubResource("FontVariation_body")
+Label/font_colors/font_color = Color(0.909804, 0.917647, 0.929412, 1)
+
+# Large Heading
+Label/font_sizes/large_heading = 48
+Label/fonts/large_heading = SubResource("FontVariation_title")
+Label/font_colors/large_heading = Color(0.909804, 0.917647, 0.929412, 1)
+
+# Medium Heading
+Label/font_sizes/medium_heading = 32
+Label/fonts/medium_heading = SubResource("FontVariation_heading_medium")
+Label/font_colors/medium_heading = Color(0.909804, 0.917647, 0.929412, 1)
+
+# Small Heading
+Label/font_sizes/small_heading = 24
+Label/fonts/small_heading = SubResource("FontVariation_heading_small")
+Label/font_colors/small_heading = Color(0.909804, 0.917647, 0.929412, 1)
+
+# Body Text
+Label/font_sizes/body = 16
+Label/fonts/body = SubResource("FontVariation_body")
+Label/font_colors/body = Color(0.909804, 0.917647, 0.929412, 1)
+
+# Small Body
+Label/font_sizes/body_small = 14
+Label/fonts/body_small = SubResource("FontVariation_body_small")
+Label/font_colors/body_small = Color(0.909804, 0.917647, 0.929412, 1)
+
+# Label
+Label/font_sizes/label = 12
+Label/fonts/label = SubResource("FontVariation_label")
+Label/font_colors/label = Color(0.909804, 0.917647, 0.929412, 1)
+
+# Secondary Label
+Label/font_colors/secondary = Color(0.611765, 0.639216, 0.686275, 1)
+
+# Tertiary Label
+Label/font_colors/tertiary = Color(0.419608, 0.447059, 0.501961, 1)
+
+# Error Text
+Label/font_colors/error = Color(0.937255, 0.266667, 0.266667, 1)
+
+# Success Text
+Label/font_colors/success = Color(0.0627451, 0.72549, 0.505882, 1)
+
+# Warning Text
+Label/font_colors/warning = Color(0.960784, 0.623529, 0.0588235, 1)
+
+# Info Text
+Label/font_colors/info = Color(0.231373, 0.509804, 0.988235, 1)
+
+# ============================================================================
+# BUTTON STYLING
+# ============================================================================
+
+Button/font_sizes/font_size = 14
+Button/fonts/font = SubResource("FontVariation_label")
+Button/font_colors/font_color = Color(0.0627451, 0.113725, 0.156863, 1)
+Button/font_colors/font_focus_color = Color(0.0627451, 0.113725, 0.156863, 1)
+Button/font_colors/font_hover_color = Color(0.0627451, 0.113725, 0.156863, 1)
+Button/font_colors/font_pressed_color = Color(0.0627451, 0.113725, 0.156863, 1)
+Button/font_colors/font_disabled_color = Color(0.419608, 0.447059, 0.501961, 1)
+
+Button/styles/normal = SubResource("StyleBoxFlat_button_primary")
+Button/styles/hover = SubResource("StyleBoxFlat_button_primary_hover")
+Button/styles/pressed = SubResource("StyleBoxFlat_button_primary")
+Button/styles/focus = SubResource("StyleBoxFlat_button_primary")
+Button/styles/disabled = SubResource("StyleBoxFlat_button_primary")
+
+# ============================================================================
+# PANEL & CONTAINER STYLING
+# ============================================================================
+
+Panel/colors/panel_color = Color(0.0941176, 0.113725, 0.156863, 1)
+
+PanelContainer/colors/panel_color = Color(0.0941176, 0.113725, 0.156863, 1)
+
+Control/colors/margin_color = Color(0.0627451, 0.0862745, 0.117647, 1)
+
+# ============================================================================
+# LINE EDIT / INPUT STYLING
+# ============================================================================
+
+LineEdit/font_sizes/font_size = 16
+LineEdit/fonts/font = SubResource("FontVariation_body")
+LineEdit/font_colors/font_color = Color(0.909804, 0.917647, 0.929412, 1)
+LineEdit/font_colors/font_placeholder_color = Color(0.611765, 0.639216, 0.686275, 0.6)
+LineEdit/font_colors/caret_color = Color(0, 1, 0.533333, 1)
+
+# ============================================================================
+# TEXT EDIT STYLING
+# ============================================================================
+
+TextEdit/font_sizes/font_size = 16
+TextEdit/fonts/font = SubResource("FontVariation_body")
+TextEdit/font_colors/font_color = Color(0.909804, 0.917647, 0.929412, 1)
+TextEdit/font_colors/caret_color = Color(0, 1, 0.533333, 1)
+
+# ============================================================================
+# TAB CONTAINER STYLING
+# ============================================================================
+
+TabContainer/font_sizes/font_size = 14
+TabContainer/fonts/font = SubResource("FontVariation_body_small")
+TabContainer/font_colors/font_color = Color(0.611765, 0.639216, 0.686275, 1)
+TabContainer/font_colors/font_selected_color = Color(0, 1, 0.533333, 1)
+
+# ============================================================================
+# TREE / ITEMLIST STYLING
+# ============================================================================
+
+Tree/font_sizes/font_size = 14
+Tree/fonts/font = SubResource("FontVariation_body_small")
+Tree/font_colors/font_color = Color(0.909804, 0.917647, 0.929412, 1)
+
+ItemList/font_sizes/font_size = 14
+ItemList/fonts/font = SubResource("FontVariation_body_small")
+ItemList/font_colors/font_color = Color(0.909804, 0.917647, 0.929412, 1)
+
+# ============================================================================
+# ACCENT COLOR DEFINITIONS (For custom usage)
+# ============================================================================
+
+Theme/colors/accent_green = Color(0, 1, 0.533333, 1)
+Theme/colors/accent_pink = Color(1, 0, 0.435294, 1)
+Theme/colors/bg_primary = Color(0.0627451, 0.0862745, 0.117647, 1)
+Theme/colors/bg_secondary = Color(0.0941176, 0.113725, 0.156863, 1)
+Theme/colors/bg_tertiary = Color(0.145098, 0.160784, 0.239216, 1)
+Theme/colors/text_primary = Color(0.909804, 0.917647, 0.929412, 1)
+Theme/colors/text_secondary = Color(0.611765, 0.639216, 0.686275, 1)
+Theme/colors/text_tertiary = Color(0.419608, 0.447059, 0.501961, 1)
+Theme/colors/border_color = Color(0.215686, 0.254902, 0.313725, 1)
+Theme/colors/success_color = Color(0.0627451, 0.72549, 0.505882, 1)
+Theme/colors/warning_color = Color(0.960784, 0.623529, 0.0588235, 1)
+Theme/colors/error_color = Color(0.937255, 0.266667, 0.266667, 1)
+Theme/colors/info_color = Color(0.231373, 0.509804, 0.988235, 1)
